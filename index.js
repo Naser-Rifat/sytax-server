@@ -2,8 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const { MongoClient } = require("mongodb");
 require("dotenv").config();
-// DB_USER=bicycledb
-// DB_PASS=hYVA5SDxJaP2WZaK
+
 const ObjectId = require("mongodb").ObjectId;
 
 const port = process.env.PORT || 5000;
