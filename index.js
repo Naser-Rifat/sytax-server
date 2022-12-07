@@ -45,7 +45,9 @@ async function run() {
     // add cycles info
     app.post("/services", async (req, res) => {
       const cycle = req.body;
+      console.log(cycle);
       const result = await servicesCollection.insertOne(cycle);
+      console.log( res.json(result))
       res.json(result);
     });
     // delete an products item
@@ -55,7 +57,7 @@ async function run() {
       const user = req.body;
       console.log(req.body);
       const result = await userDataCollection.insertOne(user);
-      console.log(result)
+      console.log(result);
       res.json(user);
     });
 
